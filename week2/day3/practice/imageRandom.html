@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <img src="../practice/image/1.jpg" alt="">
+</body>
+<script>
+
+    // img 태그 불러오기
+    let img = document.querySelector('img');
+
+    // img 바꾸는 함수
+    function changeImg() {
+        // 랜덤 숫자 생성 (1 ~ 8)
+        let randomInt = Math.floor( ( Math.random() * 8 )  + 1);
+
+        // img의 src 속성값 변경
+        img.setAttribute('src', `../practice/image/${randomInt}.jpg`)
+    }
+    // img 클릭 시 발생
+    img.addEventListener('click', changeImg);
+
+    console.log(randomInt);
+
+
+
+
+</script>
+</html>

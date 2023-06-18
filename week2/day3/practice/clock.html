@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>현재 시간</h1>
+    <p id="current"></p>
+</body>
+<script>
+    let clock = document.getElementById("current");
+
+    function getTime() {
+        const date = new Date() ;
+        const hour = date.getHours() ;
+        const minutes = date.getMinutes() ;
+        const seconds = date.getSeconds() ;
+        clock.innerHTML = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+    };
+
+    getTime();
+    setInterval(getTime, 1000);
+    console.log(getTime);
+</script>
+</html>
+
+
+<!-- 힌트
+1. 시간을 입력할 HTML 태그 만들기
+2. new Date() - 시,분,초 가져와서 입력
+3. setInterval - 1초마다 시간 업데이트하기 -->

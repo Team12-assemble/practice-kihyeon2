@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="text"></h1>
+    <h2 id="text2"></h2>
+    <h3 id="text3"></h3>
+
+    <script>
+        let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let length =  text.length;
+        console.log(length);
+
+        let text2 = "Apple, Banana, Kiwi";
+        let part = text2.slice(7,13);
+        console.log(part);
+
+        let text3="Please visit Microsoft!"
+        let newText = text3.replace("Microsoft", "W3Schools");
+        console.log(newText);
+
+        const go = document.getElementById("text")
+        go.innerHTML = length;
+
+    </script>
+</body>
+</html>
