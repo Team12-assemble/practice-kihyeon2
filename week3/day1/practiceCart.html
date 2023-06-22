@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #add {
+            color : white;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>chicken</h1>
+        <p>price: document.write(foodlist.chicken)</p>
+        <input id= "add" type="button" value="장바구니 추가" onclick="onCart()">
+
+        <h1>noodle</h1>
+        <p>price: foodlist.noodle</p>
+        <input id= "add" type="button" value="장바구니 추가" onclick="onCart()">
+
+        <h1>pizza</h1>
+        <p>price: foodlist.pizza</p>
+        <input id= "add" type="button" value="장바구니 추가" onclick="onCart()">
+
+        <h1>burger</h1>
+        <p>price: foodlist.burger</p>
+        <input id= "add" type="button" value="장바구니 추가" onclick="onCart()">
+
+        <h1>sushi</h1>
+        <p>price: foodlist.sushi</p>
+        <input id= "add" type="button" value="장바구니 추가" onclick="onCart()">
+    </div>
+
+    <div id="cart">
+        <h1>장바구니</h1>
+        <ul>
+            <li> addEventListener </li>
+        </ul>
+    </div>
+
+    <script>
+        const foodlist = {
+            "chicken" : 20000,
+            "noodle" : 10000,
+            "pizza" : 30000,
+            "burger" : 5000,
+            "sushi" : 15000
+        };
+
+        function createCard(data) {
+            for (let i = 0; i < data.length; i++) {}
+        }
+
+    </script>
+</body>
+</html>
+
+
+
+<!-- 
+1. 메뉴, 가격 선정
+2. '장바구니 추가' 버튼 만들기
+3. 클릭 이벤트 및 이벤트 핸들러 만들기
+
+이벤트 핸들러
+- createElement
+- appendChild
+
+*forEach, arrow function
+-->

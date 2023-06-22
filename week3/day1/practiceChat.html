@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            height : 200px;
+            line-height: 200px;
+            text-align: center;
+            color: white;
+            background-color: rgb(46, 77, 46);
+        }
+
+        #send {
+            color: white;
+            background-color: rgb(46, 77, 46);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>실시간 채팅</h1>
+    <form>
+        <input type="username" id="username" value="사용자명">
+        <input type="text" id="message" value="메시지를 입력하세요">
+        <submit id="send">전송</submit>
+    </form>
+
+    <script>
+        const chatUser = document.getElementById('username')
+        const chatBox = document.getElementById('message')
+
+        
+
+        function realtimeChat (name, sentence) {
+            const opinion = document.createElement("li");
+            opinion.textContent = `${name} : ${sentence}`;
+            chatbox.appendChild(opinion);
+
+        }
+    </script>
+</body>
+</html>

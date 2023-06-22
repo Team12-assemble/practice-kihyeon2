@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let txt = 'ABCDEFGHIJKLMNOP'
+        // document.write(txt.includes("ABc"), "<br>");
+        // document.write(txt.startsWith("ABCD"), "<br>");
+        // document.write(txt.startsWith("BCD"), "<br>");
+        // document.write(txt.endsWith("NOP"), "<br>");
+
+
+
+        // let score = 69;
+        // let money = 0;
+
+        // score = prompt("몇점이냐");
+        
+        // if (score > 90) {
+        //     document.write('참 잘했습니다. <br>');
+        //     money += 10000;
+        // } else if (score > 80) {
+        //     document.write('잘했습니다. <br>');
+        //     money += 5000;
+        // } else if (score >70) {
+        //     document.write('그냥 했습니다. <br>');
+        //     money += 1000;
+        // } else {
+        //     money = 0;
+        // }
+        // document.write(money);
+
+
+
+
+        // let x = 3
+        // x == 4 ? document.write("오케이") : document.write("노우")
+        // x가 4가 맞냐? 맞으면 왼쪽 값 | 틀리면 오른쪽 값
+
+
+
+        // let score = 91
+        // let money = 10000
+
+        // score > 90 
+        //     ? (money += 10000) 
+        //     :score > 80 
+        //     ? (money +=5000) 
+        //     :score > 70 
+        //     ? (money +=1000)
+        //     : (money = 0);
+
+        //     money += 10000
+        //     money = money + 10000
+
+        //     document.write(money);
+
+
+
+        // let day = new Date();
+
+        // console.log(day.getDate());
+        // console.log(day.getDay());
+        // console.log(day.getFullYear());
+        // getDay는 요일을 나타낸다(월요일 => 1 일요일 => 0)
+
+
+
+
+        // switch (new Date().getDay()) {
+        //     case 0:
+        //         document.write("일요일입니다");
+        //         break;
+        //     case 1:
+        //         document.write("월요일입니다");
+        //         break;
+        //     case 2:
+        //         document.write("화요일입니다");
+        //         break;
+        //     case 3:
+        //         document.write("수요일입니다");
+        //         break;
+        //     case 4:
+        //         document.write("목요일입니다");
+        //         break;
+        //     case 5:
+        //         document.write("금요일입니다");
+        //         break;
+        //     case 6:
+        //         document.write("토요일입니다");
+        // }
+
+
+
+        // for (let i = 1; i <10; i++) {
+        //     for (let j = 1; j <10; j++) {
+        //         document.write(`${i} X ${j} = ${i * j} <br>`)
+        //     }
+        // }
+
+
+
+        // let arr = [10, 20, 30, 40, 50]
+        // arr.forEach((e) => console.log(e*3));
+
+
+
+
+        // const numbers = [1,2,3,4,5]
+        // const squardNum = numbers.map(function(number){
+        //     return number ** 2;
+        // });
+        // console.log(squardNum);
+        // map은 아주 중요하다
+
+
+
+
+
+        // function Person (first, last, age) {
+        //     this.firstName = first;
+        //     this.LastName = last;
+        //     this.age = age;
+        // }
+
+        // const myFather = new Person("on", "namgung", "50")
+        // const myMother = new Person("kyeongsuk", "jung", "45")
+
+        // document.write(`아빠 나이는 ${myFather.age} <br>`);
+        // document.write(`엄마 나이는 ${myMother.age} <br>`);
+
+        
+
+
+        // function myDisplayer(something) {
+        //     document.getElementById("demo")
+        // }
+
+
+        setInterval(myFunction, 1000);
+
+        function myFunction () {
+            let d = new Date();
+            document.getElementById("demo").innerHTML =
+            d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds()
+        }
+    </script>
+    <p id="demo"></p>
+</body>
+</html>

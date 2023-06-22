@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type = "text/babel">
+        const root = document.getElementById("root")
+        function Mycomponent () {
+            return React.createElement("h1",null,"함수형 컴포넌트입니다!");
+        }
+        // ReactDOM.render(React.createElement(Mycomponent),root);
+        ReactDOM.render(<Mycomponent />,root); 
+        // <blabla /> >> 이걸 쓸려면 babel을 써야함
+    </script>
+</body>
+</html>
+
+
+
+
+
+<!-- <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script> > react불러오기위해
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script> > react돔 불러오기 위해
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> 
+> babel 이용하기 위해(babel을 씀으로써 최신 자바스크립트를 이해할 수 있게 함) -->

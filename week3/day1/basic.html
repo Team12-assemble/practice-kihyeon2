@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function collect (arr) {
+            return arr.join("");
+        }
+        const strings = ['Hello', ' ', 'World', '!'];
+        const strings2 = ['Hello2', ' ', 'World', '!'];
+        const strings3 = ['Hello3', ' ', 'World', '!'];
+
+
+        console.log(collect(strings))
+        console.log(collect(strings2))
+        console.log(collect(strings3))
+
+
+        document.write(collect())
+    </script>
+</body>
+</html>
+
+
+<!-- 출력 : "Hello World!"
+concat
+join -->

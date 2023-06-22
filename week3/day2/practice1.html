@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기소개</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+   <link rel="stylesheet" href="/week2/day1/style.css">
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        const root = document.getElementById("root")
+        function Produce () {
+            return (
+                <div>
+                    <header>
+                    <h1>나란?!</h1>
+                    <img src="C:\Users\namgu\OneDrive\바탕 화면\기타\기현(과거)\이력서사진\3-4  50kb미만.jpg" alt="이력서사진" width="70px"></img>
+                    </header>
+                    <nav>
+                        <h4><strong>목차</strong></h4>
+                        <ul>
+                            <li>MBTI</li>
+                            <li>취미</li>
+                            <li>특기</li>
+                            <li>이상형</li>
+                            <li>취업하고자 하는 회사</li>
+                        </ul>
+                    </nav>
+                    <main>
+                        <dl>
+                            <dt>MBTI :</dt>
+                            <dd>ESTP</dd><br />
+                            <dt>취미 :</dt>
+                            <dd>게임, 운동, 영화감상</dd><br />
+                            <dt>특기 :</dt>
+                            <dd><a href="https://fifaonline4.nexon.com/main/index">피파온라인</a>, 배드민턴</dd><br />
+                            <dt>이상형 :</dt>
+                            <dd>성품이 훌륭한 여성분</dd><br />
+                            <dt>취업하고자 하는 회사 :</dt>
+                            <dd>IT 관련 대기업.. 이나 창업?!</dd><br />
+                            <dt>목표 :</dt>
+                            <dd>대기업 수준의 회사에 취업하거나 혹은 개인의 사업을 시작해서 스타트업 회사를 만들고 싶습니다. 이후 파이어족으로 편안한 삶 영위하기..</dd><br />
+                            <dt>별명 :</dt>
+                            <dd><a href="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20150920_36%2Fgkfngkfn414_1442730109376iNWzd_JPEG%2F%25BE%25DE%25B1%25D7%25B8%25AE%25B9%25F6%25B5%25E5_%25BC%25D5%25B1%25D7%25B8%25B211.jpg&type=sc960_832">앵그리버드</a></dd>
+                        </dl>
+                        <h3>좋아하는 음악</h3>
+                        <table>
+                            <tr>
+                                <th>가수</th>
+                                <th>노래</th>
+                            </tr>
+                            <tr>
+                                <td>찰리푸스</td>
+                                <td>Attention</td>
+                            </tr>
+                            <tr>
+                                <td>카더가든</td>
+                                <td>나무</td>
+                            </tr>
+                            <tr>
+                                <td>데이식스</td>
+                                <td>예뻤어</td>
+                            </tr>
+                            <tr>
+                                <td>빅뱅</td>
+                                <td>에라 모르겠다</td>
+                            </tr>
+                        </table>
+                    </main>
+                    <footer>
+                        <p>저에 대해서 간단히 소개해보았습니다!👍👍</p>
+                    </footer>
+                </div>
+            )
+        }
+
+        ReactDOM.render(<Produce />,root)
+    </script>
+</body>
+</html>
+
+
+
+<!-- JS가 아닌 React에선 모든 태그가 닫혀져야한다
+
+br도 <br /> 이렇게 꼭 쓰는 습관화
+<img src="" alt=""> 이것도 </img>로 닫아줘야 리액트는 작동한다 -->

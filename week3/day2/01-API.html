@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--
+api는 공개하면 안댐
+
+깃허브 올릴때 따른 방법으로 올려야함 
+
+https://programming119.tistory.com/105
+https://velog.io/@kimjumpsun_code/Github%EC%97%90-API-Key-%EC%88%A8%EA%B8%B0%EA%B8%B0
+
+-->
+<body>
+    <div id="weather"></div>
+    <script>
+        //1//
+        const weather = document.getElementById("weather")
+        const API_KEY = '1dffc010d0d44dfef2149a5c82fef9b9'
+        //4//
+        function getWeather(lat,lon) {
+            console.log(lat,lon);
+            fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`)
+            //5//
+            .then(function (response) {
+                console.log("response ===", response);
+                return response.json();
+            })
+            //6//
+            .then(function (json) {
+                console.log("josn ===", json);
+                const temp = json.main.temp;
+                const humidity = json.main.humidity;
+                weather.innerText = `${temp} @ ${humidity}`;
+            });
+        }
+        //3//
+        function handleGeoSuccess (pos) {
+            console.log(pos);
+            
+            const latitude = pos.coords.latitude
+            const longitude = pos.coords.longitude
+
+            // console.log(latitude);
+            // console.log(longitude);
+            getWeather(latitude,longitude);
+        }
+
+        function handleGeoError () {
+            console.log("error!");
+        }
+        //2//
+        function init() {
+            navigator.geolocation.getCurrentPosition(handleGeoSuccess, handleGeoError)
+            
+        }
+
+        init();
+    </script>
+</body>
+</html>
+
+
+
+
+<!-- 
+1. lat, log 값을 가져와야한다.
+2. weather api 접근해서 lat, lon, api key 값을 넣고 우리가 필요한 날씨 데이터를 가져온다.
+3. 가져온 값을 화면에 뿌려준다.
+
+navigator.geolation.getCurrentposition
+success때의 함수 실행
+error났을때의 함수 실행
+
+function getWeather (lat, lon) {
+    fetch(``) 통신해서 리스폰스 가져와라 그리고 나서 json 데이터 가져와라 (callback함수)
+}
+
+function success (pos) {
+    console.log(pos); >> 성공했을때 이 값 실행
+    pos.coords.latitude > 정리 > const latitude = pos.coords.latitude
+    pos.coords.longitude > 정리 > const longitude = pos.coords.longitude
+
+    getWeather(latitude, longitude)
+}
+
+function error () {
+    console.log("error"); >> 실패했을떄 이 값 실행
+}
+
+funtion init() {
+    navigator.geolocation.getCurrentPosition(success, error)
+}
+
+init(); << 이걸로 화면에 값 나오도록 실행시키는것 
+-->

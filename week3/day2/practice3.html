@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 폼</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type=text/babel>
+        const root = document.getElementById("root");
+        function Login() {
+            const username = document.getElementById("username")
+            const password = document.getElementById("password")
+            console.log(username)
+            console.log(password)
+            return (
+                <div>
+                    <form action="" method="get">
+                        <label for="username">사용자명:</label>
+                        <input type="text" id="username" name="username" required></input><br />
+                        
+                        <label for="password">비밀번호:</label>
+                        <input type="password" id="password" name="password" required></input><br />
+                        <input type="submit" value="로그인"></input>
+                    </form>                    
+                </div>
+            )
+            
+        }
+
+        ReactDOM.render(<Login />,root)
+        
+    </script>
+    
+</body>
+</html>
