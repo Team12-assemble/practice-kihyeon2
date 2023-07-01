@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const root = document.getElementById("root")
+        let a = 0;
+        const Title = () => (
+            <h1 
+                id="h1" 
+                style={{color:"blue"}} 
+                onMouseEnter={() => console.log("mouse over!!")}
+                >
+                 Total Clicks: 0
+                 </h1>);
+        const Button = () => (
+            <button 
+                onClick={() => {
+                a = a+1;
+                console.log(a);
+                }}
+            >
+            Click me
+            </button>
+            );
+        const Container = () => (
+            <div>
+                <Title /> <Button />
+                <Title /> <Button />
+                <Title /> <Button />
+                <Title /> <Button />
+            </div>
+        );
+        ReactDOM.render(<Container />, root);
+    </script>
+</body>
+</html>
+
+
+<!-- console이 찍히는 경우를 알고 접근해야한다
+mouse over같은 경우는 마주스만 갖다 되면 되는거라 잘 작동하고 있었고
+a같은 경우는 변수로 script안에 선언이 안되어있어서 안됐던것 > let a = 0 이런식으로 선언하면 된다 -->
